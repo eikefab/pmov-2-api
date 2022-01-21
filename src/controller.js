@@ -37,7 +37,7 @@ module.exports = {
     },
 
     async delete(req, res) {
-        const { id } = req.query;
+        const { id } = req.params;
 
         await service.delete(id);
 
