@@ -21,9 +21,9 @@ module.exports = {
     },
 
     async create(req, res) {
-        const { title, description, costumer } = req.body;
+        const { title, description, customer } = req.body;
 
-        await service.create(title, description, costumer);
+        await service.create(title, description, customer);
 
         return res.send('Done.');
     },
@@ -37,7 +37,7 @@ module.exports = {
     },
 
     async delete(req, res) {
-        const { id } = req.body;
+        const { id } = req.query;
 
         await service.delete(id);
 
